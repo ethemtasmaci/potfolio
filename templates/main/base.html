@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}İbrahim Ethem Tasmaci - Software Developer{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --white-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .navbar {
+            background-color: rgba(26, 26, 46, 0.95) !important;
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.8rem 0;
+        }
+
+        .navbar-brand {
+            color: var(--white-color) !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: var(--white-color) !important;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--white-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background-color: rgba(26, 26, 46, 0.98);
+            color: var(--white-color);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a {
+            color: var(--white-color);
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Sosyal medya ikonları için hover renkleri */
+        .social-links a:nth-child(1):hover { color: #6e5494; }  /* GitHub */
+        .social-links a:nth-child(2):hover { color: #0077b5; }  /* LinkedIn */
+        .social-links a:nth-child(3):hover { color: #1DA1F2; }  /* Twitter */
+        .social-links a:nth-child(4):hover { color: #EA4335; }  /* Email */
+
+        .footer h5 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Gradient Border Effect */
+        .container.mt-4 {
+            position: relative;
+            padding: 2rem;
+            background: rgba(32, 30, 67, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .container.mt-4::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ffffff, #1a1a2e, #ffffff);
+            border-radius: 17px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .intro-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .flip-card {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 1.5s;
+            transform-style: preserve-3d;
+            animation: initialFlip 1.5s ease-in-out forwards 2s;
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            color: var(--text-color);
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            color: var(--text-color);
+        }
+
+        .intro-name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .intro-title {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-family: 'Consolas', monospace;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
+        }
+
+        .presents-text {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        @keyframes initialFlip {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(180deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .main-content {
+            opacity: 0;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <!-- Ön Yüz -->
+                <div class="flip-card-front">
+                    <h1 class="intro-name">İbrahim Ethem Tasmacı</h1>
+                    <div class="intro-title">Software Developer</div>
+                </div>
+                <!-- Arka Yüz -->
+                <div class="flip-card-back">
+                    <div class="presents-text">Gururla Sunar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">İbrahim Ethem Tasmaci</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/hakkimda">Hakkımda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projeler">Projeler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/yetenekler">Yetenekler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/iletisim">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->            
+        {% block content %}
+            <!-- İçerik buraya yüklenecek -->
+        {% endblock %}
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <h5>İbrahim Ethem Tasmaci</h5>
+                        <p>Software Developer</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="social-links">
+                            <a href="https://github.com/ethemtasmaci" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/ethemtasmaci/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:iethemtasmaci@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; {% now "Y" %} İbrahim Ethem Tasmaci. Tüm hakları saklıdır.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS ve Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const introScreen = document.getElementById('introScreen');
+            const mainContent = document.getElementById('mainContent');
+
+            // Ana içeriği gizle
+            mainContent.style.display = 'none';
+
+            // Zamanlama ayarları
+            setTimeout(() => {
+                // Intro ekranını fade out yap
+                introScreen.style.animation = 'fadeOut 1s ease forwards';
+                
+                // Intro ekranını kaldır ve ana içeriği göster
+                setTimeout(() => {
+                    introScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    mainContent.classList.add('visible');
+                }, 1000);
+            }, 4500); // Flip animasyonu + biraz bekleme süresi
+        });
+    </script>
+</body>
+</html>

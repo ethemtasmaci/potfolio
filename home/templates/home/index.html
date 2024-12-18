@@ -1,0 +1,820 @@
+{% extends "main/base.html" %}
+
+{% block title %}İbrahim Ethem Tasmacı - Full Stack Developer{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="hero-title">
+                    İbrahim Ethem Tasmacı
+                    <span class="hero-subtitle">Full Stack Developer</span>
+                </h1>
+                <div class="hero-description">
+                    <p>18 yaşında, tutkulu bir yazılım geliştiriciyim. Web, mobil ve API geliştirme konularında çözümler üretiyorum.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-outline-light btn-lg">Hakkımda</a>
+                    <a href="#contact" class="btn btn-primary btn-lg ms-3">İletişime Geç</a>
+                </div>
+                <div class="hero-social-links">
+                    <a href="https://github.com/ethemtasmaci" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ethemtasmaci/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:iethemtasmaci@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Kaydır</span>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="tech-stack-section" id="skills">
+    <div class="container">
+        <div class="section-title">
+            <h2>Teknoloji Stack</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="tech-grid">
+            <!-- Frontend Card -->
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend</h3>
+                <div class="tech-items">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">jQuery</span>
+                </div>
+            </div>
+
+            <!-- Backend Card -->
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend</h3>
+                <div class="tech-items">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">ASP.NET</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">FastAPI</span>
+                </div>
+            </div>
+
+            <!-- Database Card -->
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Veritabanı & Mobile</h3>
+                <div class="tech-items">
+                    <span class="tech-badge">MSSQL</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Firebase</span>
+                    <span class="tech-badge">React Native</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Projelerim</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="E-Ticaret Projesi">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://proje-linki.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/username/project" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Ticaret Platformu</h3>
+                    <p>Modern bir e-ticaret platformu. Kullanıcı dostu arayüz, güvenli ödeme sistemi ve admin paneli içerir.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="Mobil Uygulama">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://proje2-linki.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/username/project2" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Sosyal Medya Uygulaması</h3>
+                    <p>React Native ile geliştirilmiş cross-platform sosyal medya uygulaması.</p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project3.jpg" alt="API Projesi">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://api-docs.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/username/api-project" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>RESTful API Servisi</h3>
+                    <p>FastAPI ile geliştirilmiş yüksek performanslı API servisi.</p>
+                    <div class="project-tech">
+                        <span>FastAPI</span>
+                        <span>MongoDB</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="github-section" id="skills-detail"></section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Uzmanlık Seviyelerim</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="skills-container">
+            <!-- İleri Seviye -->
+            <div class="skill-category">
+                <h3>İleri Seviye</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-line"><span class="react"></span></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>FastAPI</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-line"><span class="fastapi"></span></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Django</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress-line"><span class="django"></span></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>HTML/CSS/JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-line"><span class="frontend"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orta Seviye -->
+            <div class="skill-category">
+                <h3>Orta Seviye</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>React Native</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-line"><span class="react-native"></span></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-line"><span class="nodejs"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Başlangıç Seviye -->
+            <div class="skill-category">
+                <h3>Başlangıç Seviye</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>C#</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress-line"><span class="csharp"></span></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>ASP.NET</span>
+                            <span>35%</span>
+                        </div>
+                        <div class="progress-line"><span class="aspnet"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Timeline Section -->
+<section class="timeline-section" id="experience">
+    <div class="container">
+        <div class="section-title">
+            <h2>Deneyim & Eğitim</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Full Stack Developer</h3>
+                    <span class="timeline-date">2023 - Şimdi</span>
+                    <p>Freelance projeler geliştirme ve müşteri çözümleri üretme.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Web Geliştirme Eğitimi</h3>
+                    <span class="timeline-date">2022 - 2023</span>
+                    <p>Modern web teknolojileri ve framework'ler üzerine kapsamlı eğitim.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>İletişime Geç</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>ibrahimethemtasmaci@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Konum</h3>
+                    <p>Türkiye</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefon</h3>
+                    <p>+90 XXX XXX XX XX</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 46, 0.97) 0%,
+        rgba(26, 26, 46, 0.95) 50%,
+        rgba(26, 26, 46, 0.9) 100%
+    );
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 1.8rem;
+    color: #64ffda;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.hero-buttons {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.hero-social-links {
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards 0.9s;
+}
+
+.hero-social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-social-links a:hover {
+    color: #64ffda;
+    transform: translateY(-3px);
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+    background: rgba(26, 26, 46, 0.98);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.title-line {
+    width: 80px;
+    height: 4px;
+    background: #64ffda;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Tech Stack Styles */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: #64ffda;
+    margin-bottom: 20px;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tech-badge {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Projects Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #64ffda;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-tech {
+    margin-top: 15px;
+}
+
+.project-tech span {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+/* GitHub Stats Styles */
+.github-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.github-chart {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #64ffda;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: #64ffda;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.timeline-content {
+    position: relative;
+    width: calc(50% - 40px);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 40px);
+}
+
+.timeline-date {
+    color: #64ffda;
+    font-size: 0.9rem;
+}
+
+/* Contact Styles */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.contact-info {
+    display: grid;
+    gap: 30px;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #64ffda;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.submit-btn {
+    background: #64ffda;
+    color: #1a1a2e;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: transparent;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 80px);
+        left: 80px !important;
+    }
+}
+</style>
+
+<style>
+    .skills-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .skill-category {
+        margin-bottom: 40px;
+    }
+    
+    .skill-category h3 {
+        color: #64ffda;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .skill-bars {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+    
+    .skill-bar {
+        margin: 20px 0;
+    }
+    
+    .skill-info {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    
+    .progress-line {
+        position: relative;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .progress-line span {
+        position: absolute;
+        height: 100%;
+        background: #64ffda;
+        border-radius: 5px;
+        transition: width 1s ease;
+    }
+    
+    /* İleri Seviye */
+    .progress-line .react { width: 90%; }
+    .progress-line .fastapi { width: 85%; }
+    .progress-line .django { width: 88%; }
+    .progress-line .frontend { width: 85%; }
+    
+    /* Orta Seviye */
+    .progress-line .react-native { width: 65%; }
+    .progress-line .nodejs { width: 60%; }
+    
+    /* Başlangıç Seviye */
+    .progress-line .csharp { width: 40%; }
+    .progress-line .aspnet { width: 35%; }
+    
+    @media (max-width: 768px) {
+        .skills-container {
+            padding: 0 20px;
+        }
+    }
+    </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+</script>
+
+
+
+{% endblock %}
